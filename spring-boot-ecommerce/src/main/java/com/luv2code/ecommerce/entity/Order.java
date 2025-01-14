@@ -17,6 +17,8 @@ import java.util.Set;
 @Setter
 public class Order {
 
+    // Logger logger = LoggerFactory.getLogger(Order.class);
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -67,6 +69,7 @@ public class Order {
             orderItems.add(item);
             item.setOrder(this);
         }
+        //logger.error("Error Occurred");
     }
 }
 
